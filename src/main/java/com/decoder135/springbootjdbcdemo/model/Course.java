@@ -11,6 +11,11 @@ public class Course {
     private String link;
 
     public Course() {
+    }
 
+    public Course(String title, String description, String link) {
+        this.title = title;
+        this.description = description;
+        this.link = link;
     }
 }
