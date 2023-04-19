@@ -10,4 +10,7 @@ public class Course {
 
     private String link;
 
+    public Course() {
+
+    }
 }
