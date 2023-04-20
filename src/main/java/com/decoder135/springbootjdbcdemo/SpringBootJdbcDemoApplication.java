@@ -30,6 +30,7 @@ public class SpringBootJdbcDemoApplication {
         System.out.println(firstOne.get());
 
         newCourse.setDescription("Learn to build Vue apps that talk to Spring Boot");
+        dao.update(newCourse, 6);
 
         System.out.println("\n All Courses -------------------- \n");
         List<Course> courses = dao.list();
