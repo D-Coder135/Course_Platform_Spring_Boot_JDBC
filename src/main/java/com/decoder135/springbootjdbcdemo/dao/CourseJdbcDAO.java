@@ -12,6 +12,10 @@ public class CourseJdbcDAO implements DAO<Course> {
 
     private JdbcTemplate jdbcTemplate;
 
+    public CourseJdbcDAO(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
+    }
+
     @Override
     public List<Course> list() {
         return null;
