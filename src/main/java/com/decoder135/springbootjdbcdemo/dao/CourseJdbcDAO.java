@@ -68,6 +68,6 @@ public class CourseJdbcDAO implements DAO<Course> {
 
     @Override
     public void delete(int id) {
-
+        jdbcTemplate.update("delete from COURSE where COURSE_ID = ?", id);
     }
 }
