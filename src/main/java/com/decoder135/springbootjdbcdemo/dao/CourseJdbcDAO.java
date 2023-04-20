@@ -2,6 +2,7 @@ package com.decoder135.springbootjdbcdemo.dao;
 
 import com.decoder135.springbootjdbcdemo.model.Course;
 import org.slf4j.ILoggerFactory;
+import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
@@ -50,6 +51,8 @@ public class CourseJdbcDAO implements DAO<Course> {
         Course course = null;
         try {
             course = jdbcTemplate.queryForObject(query, new Object[]{id}, rowMapper);
+        } catch (DataAccessException exception) {
+
         }
         return Optional.empty();
     }
