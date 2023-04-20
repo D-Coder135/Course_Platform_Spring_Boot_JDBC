@@ -59,7 +59,7 @@ public class CourseJdbcDAO implements DAO<Course> {
 
     @Override
     public void update(Course course, int id) {
-
+        String sql = "update course set title = ?, description = ?, link = ? where course_id = ?";
     }
 
     @Override
