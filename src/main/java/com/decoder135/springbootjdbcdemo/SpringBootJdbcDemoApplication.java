@@ -5,7 +5,9 @@ import com.decoder135.springbootjdbcdemo.model.Course;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import javax.swing.text.html.Option;
 import java.util.List;
+import java.util.Optional;
 
 @SpringBootApplication
 public class SpringBootJdbcDemoApplication {
@@ -23,6 +25,9 @@ public class SpringBootJdbcDemoApplication {
         Course newCourse = new Course("Spring Boot + Vue", "New Course", "https://www.decoder135.com/courses");
         dao.create(newCourse);
 
+        System.out.println("\n One Courses -------------------- \n");
+        Optional<Course> firstOne = dao.get(1);
+        System.out.println(firstOne.get());
 
         System.out.println("\n All Courses -------------------- \n");
         List<Course> courses = dao.list();
