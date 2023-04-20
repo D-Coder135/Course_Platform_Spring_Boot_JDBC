@@ -20,6 +20,7 @@ public class SpringBootJdbcDemoApplication {
         SpringApplication.run(SpringBootJdbcDemoApplication.class, args);
 
         System.out.println("\n Create Courses -------------------- \n");
+        Course newCourse = new Course("Spring Boot + Vue", "New Course", "https://www.decoder135.com/courses");
 
 
         System.out.println("\n All Courses -------------------- \n");
