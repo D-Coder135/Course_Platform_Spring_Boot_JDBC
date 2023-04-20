@@ -46,6 +46,7 @@ public class CourseJdbcDAO implements DAO<Course> {
 
     @Override
     public Optional<Course> get(int id) {
+        String query = "SELECT course_id, title, description, link from course where course_id = ?";
         return Optional.empty();
     }
 
