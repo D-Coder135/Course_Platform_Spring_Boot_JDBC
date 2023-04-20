@@ -30,6 +30,7 @@ public class CourseJdbcDAO implements DAO<Course> {
 
     @Override
     public List<Course> list() {
+        String query = "SELECT course_id, title, description, link from course";
         return null;
     }
 
