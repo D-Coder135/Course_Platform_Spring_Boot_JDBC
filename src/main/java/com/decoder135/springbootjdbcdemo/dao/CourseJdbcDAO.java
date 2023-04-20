@@ -48,6 +48,9 @@ public class CourseJdbcDAO implements DAO<Course> {
     public Optional<Course> get(int id) {
         String query = "SELECT course_id, title, description, link from course where course_id = ?";
         Course course = null;
+        try {
+            course = jdbcTemplate.queryForObject(query, new Object[]{id}, rowMapper);
+        }
         return Optional.empty();
     }
 
