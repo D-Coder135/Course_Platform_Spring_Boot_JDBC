@@ -11,4 +11,6 @@ public interface DAO<T> {
 
     Optional<T> get(int id);
 
+    void update(T t, int id);
+
 }
