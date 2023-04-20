@@ -52,7 +52,7 @@ public class CourseJdbcDAO implements DAO<Course> {
         try {
             course = jdbcTemplate.queryForObject(query, new Object[]{id}, rowMapper);
         } catch (DataAccessException exception) {
-
+            System.err.println("Course not found: " + id);
         }
         return Optional.empty();
     }
