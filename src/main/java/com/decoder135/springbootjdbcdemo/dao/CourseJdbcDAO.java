@@ -38,6 +38,10 @@ public class CourseJdbcDAO implements DAO<Course> {
     public void create(Course course) {
         String query = "insert into course(title, description, link) values(?, ?, ?)";
         int insertCount = jdbcTemplate.update(query, course.getTitle(), course.getDescription(), course.getLink());
+
+        if (insertCount == 1) {
+            System.out.println("New course created: " + course.getTitle());
+        }
     }
 
     @Override
