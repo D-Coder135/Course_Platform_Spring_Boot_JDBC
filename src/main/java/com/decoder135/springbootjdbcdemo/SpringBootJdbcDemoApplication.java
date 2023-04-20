@@ -20,6 +20,7 @@ public class SpringBootJdbcDemoApplication {
         SpringApplication.run(SpringBootJdbcDemoApplication.class, args);
 
         System.out.println("\n All Courses -------------------- \n");
+        List<Course> courses = dao.list();
     }
 
 }
