@@ -54,7 +54,7 @@ public class CourseJdbcDAO implements DAO<Course> {
         } catch (DataAccessException exception) {
             System.err.println("Course not found: " + id);
         }
-        return Optional.empty();
+        return Optional.ofNullable(course);
     }
 
     @Override
