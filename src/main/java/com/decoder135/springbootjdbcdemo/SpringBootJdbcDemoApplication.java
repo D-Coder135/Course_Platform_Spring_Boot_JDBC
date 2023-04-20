@@ -10,6 +10,10 @@ public class SpringBootJdbcDemoApplication {
 
     private DAO<Course> dao;
 
+    public SpringBootJdbcDemoApplication(DAO<Course> dao) {
+        this.dao = dao;
+    }
+
     public static void main(String[] args) {
         SpringApplication.run(SpringBootJdbcDemoApplication.class, args);
     }
