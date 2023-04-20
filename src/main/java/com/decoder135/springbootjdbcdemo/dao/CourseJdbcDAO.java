@@ -1,11 +1,16 @@
 package com.decoder135.springbootjdbcdemo.dao;
 
 import com.decoder135.springbootjdbcdemo.model.Course;
+import org.slf4j.ILoggerFactory;
+import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.util.List;
 import java.util.Optional;
 
 public class CourseJdbcDAO implements DAO<Course> {
+
+
+    private JdbcTemplate jdbcTemplate;
 
     @Override
     public List<Course> list() {
