@@ -3,6 +3,7 @@ package com.decoder135.springbootjdbcdemo.dao;
 import com.decoder135.springbootjdbcdemo.model.Course;
 import org.slf4j.ILoggerFactory;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -17,6 +18,15 @@ public class CourseJdbcDAO implements DAO<Course> {
     public CourseJdbcDAO(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
+
+    RowMapper<Course> rowMapper = (rs, rowNum) -> {
+      Course course = new Course();
+      course.setCourseId(rs.getInt("course_id"));
+      course.setTitle(rs.getString("title"));
+      course.setDescription(rs.getString("description"));
+      course.setLink(rs.getString("link"));
+      return course;
+    };
 
     @Override
     public List<Course> list() {
