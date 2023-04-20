@@ -29,6 +29,8 @@ public class SpringBootJdbcDemoApplication {
         Optional<Course> firstOne = dao.get(1);
         System.out.println(firstOne.get());
 
+        newCourse.setDescription("Learn to build Vue apps that talk to Spring Boot");
+
         System.out.println("\n All Courses -------------------- \n");
         List<Course> courses = dao.list();
 
