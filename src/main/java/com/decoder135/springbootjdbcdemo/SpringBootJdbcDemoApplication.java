@@ -19,6 +19,9 @@ public class SpringBootJdbcDemoApplication {
     public static void main(String[] args) {
         SpringApplication.run(SpringBootJdbcDemoApplication.class, args);
 
+        System.out.println("\n Create Courses -------------------- \n");
+
+
         System.out.println("\n All Courses -------------------- \n");
         List<Course> courses = dao.list();
 
