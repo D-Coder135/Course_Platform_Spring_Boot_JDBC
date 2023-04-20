@@ -21,6 +21,8 @@ public class SpringBootJdbcDemoApplication {
 
         System.out.println("\n All Courses -------------------- \n");
         List<Course> courses = dao.list();
+
+        courses.forEach(System.out::println);
     }
 
 }
