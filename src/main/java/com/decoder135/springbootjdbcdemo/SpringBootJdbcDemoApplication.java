@@ -5,10 +5,12 @@ import com.decoder135.springbootjdbcdemo.model.Course;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.List;
+
 @SpringBootApplication
 public class SpringBootJdbcDemoApplication {
 
-    private DAO<Course> dao;
+    private static DAO<Course> dao;
 
     public SpringBootJdbcDemoApplication(DAO<Course> dao) {
         this.dao = dao;
